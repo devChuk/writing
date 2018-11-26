@@ -385,7 +385,11 @@ $(document).on('keydown', function(e) {
     }
 });
 
-var mode = 0;
+var mode = 2;
+$('#wmd-preview').hide();
+$('#wmd-input').show().css('float', 'none').css('width', '100%').focus();
+$('body').addClass('fixedheight');
+$('html').addClass('fixedheight');
 var latexenabledonce = false;
 var latexenabled = localStorage.getItem("latex") !== "0";
 var darkmodeenabled = localStorage.getItem("darkmode") == "1";
